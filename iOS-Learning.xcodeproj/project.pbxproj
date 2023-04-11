@@ -13,6 +13,9 @@
 		D0F8834D29E57A1A0071A4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8834B29E57A1A0071A4FB /* Main.storyboard */; };
 		D0F8834F29E57A1B0071A4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F8834E29E57A1B0071A4FB /* Assets.xcassets */; };
 		D0F8835229E57A1B0071A4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8835029E57A1B0071A4FB /* LaunchScreen.storyboard */; };
+		D0F8835A29E57EA00071A4FB /* NoRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8835929E57EA00071A4FB /* NoRecordView.swift */; };
+		D0F8835C29E57EB70071A4FB /* NoRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F8835B29E57EB70071A4FB /* NoRecordView.xib */; };
+		D0F8836029E5A5770071A4FB /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8835F29E5A5770071A4FB /* Checkbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D0F8834E29E57A1B0071A4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F8835129E57A1B0071A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0F8835329E57A1B0071A4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F8835929E57EA00071A4FB /* NoRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordView.swift; sourceTree = "<group>"; };
+		D0F8835B29E57EB70071A4FB /* NoRecordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRecordView.xib; sourceTree = "<group>"; };
+		D0F8835F29E5A5770071A4FB /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		D0F8834429E57A1A0071A4FB /* iOS-Learning */ = {
 			isa = PBXGroup;
 			children = (
+				D0F8835E29E5A5610071A4FB /* Checkbox */,
 				D0F8834529E57A1A0071A4FB /* AppDelegate.swift */,
 				D0F8834729E57A1A0071A4FB /* SceneDelegate.swift */,
 				D0F8834929E57A1A0071A4FB /* ViewController.swift */,
@@ -63,8 +70,26 @@
 				D0F8834E29E57A1B0071A4FB /* Assets.xcassets */,
 				D0F8835029E57A1B0071A4FB /* LaunchScreen.storyboard */,
 				D0F8835329E57A1B0071A4FB /* Info.plist */,
+				D0F8835D29E5A49F0071A4FB /* NoRecordView */,
 			);
 			path = "iOS-Learning";
+			sourceTree = "<group>";
+		};
+		D0F8835D29E5A49F0071A4FB /* NoRecordView */ = {
+			isa = PBXGroup;
+			children = (
+				D0F8835929E57EA00071A4FB /* NoRecordView.swift */,
+				D0F8835B29E57EB70071A4FB /* NoRecordView.xib */,
+			);
+			path = NoRecordView;
+			sourceTree = "<group>";
+		};
+		D0F8835E29E5A5610071A4FB /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				D0F8835F29E5A5770071A4FB /* Checkbox.swift */,
+			);
+			path = Checkbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F8835C29E57EB70071A4FB /* NoRecordView.xib in Resources */,
 				D0F8835229E57A1B0071A4FB /* LaunchScreen.storyboard in Resources */,
 				D0F8834F29E57A1B0071A4FB /* Assets.xcassets in Resources */,
 				D0F8834D29E57A1A0071A4FB /* Main.storyboard in Resources */,
@@ -138,9 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F8835A29E57EA00071A4FB /* NoRecordView.swift in Sources */,
 				D0F8834A29E57A1A0071A4FB /* ViewController.swift in Sources */,
 				D0F8834629E57A1A0071A4FB /* AppDelegate.swift in Sources */,
 				D0F8834829E57A1A0071A4FB /* SceneDelegate.swift in Sources */,
+				D0F8836029E5A5770071A4FB /* Checkbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
