@@ -13,6 +13,11 @@
 		D0F8834D29E57A1A0071A4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8834B29E57A1A0071A4FB /* Main.storyboard */; };
 		D0F8834F29E57A1B0071A4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F8834E29E57A1B0071A4FB /* Assets.xcassets */; };
 		D0F8835229E57A1B0071A4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8835029E57A1B0071A4FB /* LaunchScreen.storyboard */; };
+		D0F8836229E60BF80071A4FB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8836129E60BF80071A4FB /* Protocols.swift */; };
+		D0F8836429E613780071A4FB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8836329E613780071A4FB /* ResultViewController.swift */; };
+		D0F8836629E625CC0071A4FB /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8836529E625CC0071A4FB /* Presenter.swift */; };
+		D0F8836829E628B30071A4FB /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8836729E628B30071A4FB /* Interactor.swift */; };
+		D0F8836C29E62B260071A4FB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8836B29E62B260071A4FB /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		D0F8834E29E57A1B0071A4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F8835129E57A1B0071A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0F8835329E57A1B0071A4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F8836129E60BF80071A4FB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		D0F8836329E613780071A4FB /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		D0F8836529E625CC0071A4FB /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		D0F8836729E628B30071A4FB /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		D0F8836B29E62B260071A4FB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +66,18 @@
 		D0F8834429E57A1A0071A4FB /* iOS-Learning */ = {
 			isa = PBXGroup;
 			children = (
+				D0F8836329E613780071A4FB /* ResultViewController.swift */,
 				D0F8834529E57A1A0071A4FB /* AppDelegate.swift */,
 				D0F8834729E57A1A0071A4FB /* SceneDelegate.swift */,
+				D0F8836129E60BF80071A4FB /* Protocols.swift */,
 				D0F8834929E57A1A0071A4FB /* ViewController.swift */,
+				D0F8836729E628B30071A4FB /* Interactor.swift */,
+				D0F8836529E625CC0071A4FB /* Presenter.swift */,
 				D0F8834B29E57A1A0071A4FB /* Main.storyboard */,
 				D0F8834E29E57A1B0071A4FB /* Assets.xcassets */,
 				D0F8835029E57A1B0071A4FB /* LaunchScreen.storyboard */,
 				D0F8835329E57A1B0071A4FB /* Info.plist */,
+				D0F8836B29E62B260071A4FB /* Router.swift */,
 			);
 			path = "iOS-Learning";
 			sourceTree = "<group>";
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F8836C29E62B260071A4FB /* Router.swift in Sources */,
+				D0F8836629E625CC0071A4FB /* Presenter.swift in Sources */,
+				D0F8836429E613780071A4FB /* ResultViewController.swift in Sources */,
 				D0F8834A29E57A1A0071A4FB /* ViewController.swift in Sources */,
 				D0F8834629E57A1A0071A4FB /* AppDelegate.swift in Sources */,
 				D0F8834829E57A1A0071A4FB /* SceneDelegate.swift in Sources */,
+				D0F8836829E628B30071A4FB /* Interactor.swift in Sources */,
+				D0F8836229E60BF80071A4FB /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
