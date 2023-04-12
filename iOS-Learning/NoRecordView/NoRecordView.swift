@@ -7,8 +7,10 @@
 
 import UIKit
 
+@IBDesignable // To see rendered on storyboard
 class NoRecordView: UIView {
-
+    
+    @IBInspectable
     @IBOutlet weak var lblNoRecord: UILabel!
     
     // Called once the View is created programatically
@@ -24,11 +26,15 @@ class NoRecordView: UIView {
     }
     
     private func initView() {
-        let viewFromXib = Bundle.main.loadNibNamed("NoRecordView", owner: self, options: nil)?[0] as? UIView
-        viewFromXib?.frame = self.bounds
-        if viewFromXib != nil {
-            addSubview(viewFromXib!)
-        }
+        let bundle = Bundle(for: type(of: self))
+        let nibName = String(describing: type(of: self))
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+        addSubview(view)
+        
+        let viewFromXib = Bundle.main.loadNibNamed("NoRecordView", owner: self)![0] as! UIView
+        //viewFromXib.frame = self.bounds // viewFromXib cover all possible area of the container
+        //addSubview(viewFromXib)
     }
-
+    
 }

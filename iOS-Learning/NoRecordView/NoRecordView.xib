@@ -8,50 +8,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoRecordView" customModule="iOS_Learning" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoRecordView" customModule="iOS_Learning" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7SL-le-1od">
-                    <rect key="frame" x="135.66666666666666" y="347" width="121.99999999999997" height="158"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-l5-Ese">
+                    <rect key="frame" x="135" y="347" width="123" height="158"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E7B-6o-7Vm">
-                            <rect key="frame" x="12.333333333333343" y="1" width="97" height="95.666666666666671"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="97" id="Qk9-r2-tMD"/>
-                                <constraint firstAttribute="width" constant="97" id="v2N-JO-bzH"/>
-                            </constraints>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="magnifyingglass.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-Y7-Ggd">
+                            <rect key="frame" x="12.666666666666664" y="1" width="97" height="95.666666666666671"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nW-79-tHT">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGR-Lv-NOc">
                             <rect key="frame" x="40" y="117" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstItem="4nW-79-tHT" firstAttribute="leading" secondItem="7SL-le-1od" secondAttribute="leading" constant="40" id="J67-fb-Mz0"/>
-                        <constraint firstAttribute="trailing" secondItem="4nW-79-tHT" secondAttribute="trailing" constant="40" id="KzK-bX-xMz"/>
-                        <constraint firstItem="4nW-79-tHT" firstAttribute="top" secondItem="E7B-6o-7Vm" secondAttribute="bottom" constant="20" id="hyb-xb-itq"/>
-                        <constraint firstItem="E7B-6o-7Vm" firstAttribute="top" secondItem="7SL-le-1od" secondAttribute="top" id="jEz-pa-HKh"/>
-                        <constraint firstAttribute="bottom" secondItem="4nW-79-tHT" secondAttribute="bottom" constant="20" id="nXE-I7-WDx"/>
-                        <constraint firstItem="E7B-6o-7Vm" firstAttribute="centerX" secondItem="7SL-le-1od" secondAttribute="centerX" id="nbU-gK-IKn"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7SL-le-1od" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Be-4R-nCb"/>
-                <constraint firstItem="7SL-le-1od" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WgM-K9-em1"/>
+                <constraint firstItem="u5R-l5-Ese" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DuL-QC-aLw"/>
+                <constraint firstItem="u5R-l5-Ese" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="135" id="eyX-ec-P3m"/>
+                <constraint firstItem="u5R-l5-Ese" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mdk-Ts-pVg"/>
+                <constraint firstItem="u5R-l5-Ese" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="288" id="zAe-aV-Ruf"/>
             </constraints>
-            <connections>
-                <outlet property="lblNoRecord" destination="4nW-79-tHT" id="79P-NV-aoh"/>
-            </connections>
-            <point key="canvasLocation" x="112.21374045801527" y="-236.61971830985917"/>
+            <point key="canvasLocation" x="71" y="-11"/>
         </view>
     </objects>
     <resources>

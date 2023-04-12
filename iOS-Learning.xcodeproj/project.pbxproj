@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00A3B5229E743DA00AE06BE /* NoRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A3B5129E743DA00AE06BE /* NoRecordView.swift */; };
+		D00A3B5429E743EC00AE06BE /* NoRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00A3B5329E743EC00AE06BE /* NoRecordView.xib */; };
 		D0F8834629E57A1A0071A4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8834529E57A1A0071A4FB /* AppDelegate.swift */; };
 		D0F8834829E57A1A0071A4FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8834729E57A1A0071A4FB /* SceneDelegate.swift */; };
 		D0F8834A29E57A1A0071A4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8834929E57A1A0071A4FB /* ViewController.swift */; };
 		D0F8834D29E57A1A0071A4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8834B29E57A1A0071A4FB /* Main.storyboard */; };
 		D0F8834F29E57A1B0071A4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F8834E29E57A1B0071A4FB /* Assets.xcassets */; };
 		D0F8835229E57A1B0071A4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F8835029E57A1B0071A4FB /* LaunchScreen.storyboard */; };
-		D0F8835A29E57EA00071A4FB /* NoRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8835929E57EA00071A4FB /* NoRecordView.swift */; };
-		D0F8835C29E57EB70071A4FB /* NoRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F8835B29E57EB70071A4FB /* NoRecordView.xib */; };
 		D0F8836029E5A5770071A4FB /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8835F29E5A5770071A4FB /* Checkbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00A3B5129E743DA00AE06BE /* NoRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordView.swift; sourceTree = "<group>"; };
+		D00A3B5329E743EC00AE06BE /* NoRecordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRecordView.xib; sourceTree = "<group>"; };
 		D0F8834229E57A1A0071A4FB /* iOS-Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F8834529E57A1A0071A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F8834729E57A1A0071A4FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		D0F8834E29E57A1B0071A4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F8835129E57A1B0071A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0F8835329E57A1B0071A4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0F8835929E57EA00071A4FB /* NoRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordView.swift; sourceTree = "<group>"; };
-		D0F8835B29E57EB70071A4FB /* NoRecordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRecordView.xib; sourceTree = "<group>"; };
 		D0F8835F29E5A5770071A4FB /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00A3B5029E742A400AE06BE /* NoRecordView */ = {
+			isa = PBXGroup;
+			children = (
+				D00A3B5129E743DA00AE06BE /* NoRecordView.swift */,
+				D00A3B5329E743EC00AE06BE /* NoRecordView.xib */,
+			);
+			path = NoRecordView;
+			sourceTree = "<group>";
+		};
 		D0F8833929E57A1A0071A4FB = {
 			isa = PBXGroup;
 			children = (
@@ -70,18 +79,9 @@
 				D0F8834E29E57A1B0071A4FB /* Assets.xcassets */,
 				D0F8835029E57A1B0071A4FB /* LaunchScreen.storyboard */,
 				D0F8835329E57A1B0071A4FB /* Info.plist */,
-				D0F8835D29E5A49F0071A4FB /* NoRecordView */,
+				D00A3B5029E742A400AE06BE /* NoRecordView */,
 			);
 			path = "iOS-Learning";
-			sourceTree = "<group>";
-		};
-		D0F8835D29E5A49F0071A4FB /* NoRecordView */ = {
-			isa = PBXGroup;
-			children = (
-				D0F8835929E57EA00071A4FB /* NoRecordView.swift */,
-				D0F8835B29E57EB70071A4FB /* NoRecordView.xib */,
-			);
-			path = NoRecordView;
 			sourceTree = "<group>";
 		};
 		D0F8835E29E5A5610071A4FB /* Checkbox */ = {
@@ -150,7 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F8835C29E57EB70071A4FB /* NoRecordView.xib in Resources */,
+				D00A3B5429E743EC00AE06BE /* NoRecordView.xib in Resources */,
 				D0F8835229E57A1B0071A4FB /* LaunchScreen.storyboard in Resources */,
 				D0F8834F29E57A1B0071A4FB /* Assets.xcassets in Resources */,
 				D0F8834D29E57A1A0071A4FB /* Main.storyboard in Resources */,
@@ -164,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F8835A29E57EA00071A4FB /* NoRecordView.swift in Sources */,
+				D00A3B5229E743DA00AE06BE /* NoRecordView.swift in Sources */,
 				D0F8834A29E57A1A0071A4FB /* ViewController.swift in Sources */,
 				D0F8834629E57A1A0071A4FB /* AppDelegate.swift in Sources */,
 				D0F8834829E57A1A0071A4FB /* SceneDelegate.swift in Sources */,
