@@ -7,6 +7,35 @@
 
 import Foundation
 
+/*
+    1. Yöntem: Her bir haberleşme için ayrı protocol yaz
+    2. Yöntem: Her katman için 1 tane protocol yaz
+ */
+
+// 1. Yöntem
+
+// View Protocol
+protocol ViewProtocol {
+    // View bu protocol'ü implement edecek.
+    // Bu sebeple Presenter referansına sahip olmalı.
+    var presenter: ViewToPresenterProtocol? {get set}
+}
+
+// Presenter Protocol
+protocol PresenterProtocol {
+    // Presenter bu protocol'ü implement edecek.
+    
+    // Bu sebeple;
+    // 1. Interactor referansına sahip olmalı
+    var interactor: PresenterToInteractorProtocol? {get set}
+    
+    // 2. View referansına sahip olmalı
+    var view: PresenterToViewProtocol? { get set }
+    
+    // 3. Router referansına sahip olmalı
+    var router: PresenterToRouterProtocol? {get set}
+}
+
 // View'ın haberleşebileceği presenter
 protocol ViewToPresenterProtocol {
     // Presenter, View'a ne sunmalı?
@@ -20,7 +49,6 @@ protocol PresenterToViewProtocol {
     var presenter: ViewToPresenterProtocol? {get set}
     
     // View, Presenter'a ne sunmalı?
-    func showResult(currencies: Array<String>)
     func showError()
 }
 
@@ -44,20 +72,6 @@ protocol InteractorToPresenterProtocol {
 // Presenter'ın haberleşeceği Router
 protocol PresenterToRouterProtocol {
     // Router, Presenter'a ne sunmalı?
-    func showResultScreen()
+    func showResultScreen(payload: Array<String>)
 }
 
-// Presenter Protocol
-protocol PresenterProtocol {
-    // Presenter bu protocol'ü implement edecek.
-    
-    // Bu sebeple;
-    // 1. Interactor referansına sahip olmalı
-    var interactor: PresenterToInteractorProtocol? {get set}
-    
-    // 2. View referansına sahip olmalı
-    var view: PresenterToViewProtocol? { get set }
-    
-    // 3. Router referansına sahip olmalı
-    var router: PresenterToRouterProtocol? {get set}
-}
