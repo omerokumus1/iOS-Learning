@@ -16,14 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-AL-mSc" customClass="NoRecordView" customModule="iOS_Learning" customModuleProvider="target">
-                                <rect key="frame" x="87" y="324" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-AL-mSc" customClass="NoRecordView" customModule="iOS_Learning" customModuleProvider="target">
+                                <rect key="frame" x="87" y="247" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WjL-fw-ToB" customClass="Checkbox" customModule="iOS_Learning" customModuleProvider="target">
-                                <rect key="frame" x="87" y="542" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjL-fw-ToB" customClass="Checkbox" customModule="iOS_Learning" customModuleProvider="target">
+                                <rect key="frame" x="87" y="465" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <action selector="checkChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dKG-aZ-yET"/>
@@ -32,6 +30,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bb9-AL-mSc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="199" id="1f9-gU-Lcx"/>
+                            <constraint firstItem="WjL-fw-ToB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="465" id="4Jn-SM-SmU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WjL-fw-ToB" secondAttribute="bottom" constant="269" id="HcJ-Ky-h9V"/>
+                            <constraint firstItem="WjL-fw-ToB" firstAttribute="top" secondItem="bb9-AL-mSc" secondAttribute="bottom" constant="90" id="LYh-Eq-8ip"/>
+                            <constraint firstItem="bb9-AL-mSc" firstAttribute="leading" secondItem="WjL-fw-ToB" secondAttribute="leading" id="d9I-oB-c7Q"/>
+                            <constraint firstItem="bb9-AL-mSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAH-zn-G4C"/>
+                            <constraint firstItem="bb9-AL-mSc" firstAttribute="trailing" secondItem="WjL-fw-ToB" secondAttribute="trailing" id="v1k-rX-JPy"/>
+                            <constraint firstItem="bb9-AL-mSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="xYm-Kb-F4I"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="noRecordView" destination="bb9-AL-mSc" id="ZTH-mK-wt8"/>
