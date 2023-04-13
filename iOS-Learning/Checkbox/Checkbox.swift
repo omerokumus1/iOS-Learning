@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable // To see rendered on storyboard
-class Checkbox: UIView {
+class Checkbox: UIControl {
 
     // Create weak reference to UIViews in another view
     private weak var imageView: UIImageView!
@@ -35,7 +35,28 @@ class Checkbox: UIView {
     }
     
     private func setup() {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(imageView)
         
+        imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        imageView.image = UIImage(systemName: "checkmark.square.fill")
+        imageView.contentMode = .scaleAspectFit
+        self.imageView = imageView
+        backgroundColor = .clear
+        
+        addTarget(self,
+                  action: #selector(touchUpInsideImageView),
+                  for: .touchUpInside)
+    }
+    
+    @objc private func touchUpInsideImageView() {
+        checked = !checked
+        sendActions(for: .valueChanged)
     }
     
     

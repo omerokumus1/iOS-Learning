@@ -32,7 +32,7 @@ class NoRecordView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         addSubview(view)
         
-        let viewFromXib = Bundle.main.loadNibNamed("NoRecordView", owner: self)![0] as! UIView
+        //let viewFromXib = Bundle.main.loadNibNamed("NoRecordView", owner: self)![0] as! UIView
         //viewFromXib.frame = self.bounds // viewFromXib cover all possible area of the container
         //addSubview(viewFromXib)
     }
