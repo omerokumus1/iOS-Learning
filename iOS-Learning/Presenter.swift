@@ -5,16 +5,18 @@
 //  Created by Ömer Faruk Okumuş on 12.04.2023.
 //
 
-import Foundation
+import UIKit
+
+typealias VC = PresenterToViewProtocol & UIViewController
 
 class Presenter: PresenterProtocol {
     var interactor: PresenterToInteractorProtocol?
     
-    var view: PresenterToViewProtocol?
+    var view: VC?
     
     var router: PresenterToRouterProtocol?
     
-    init(view: PresenterToViewProtocol? = nil) {
+    init(view: VC? = nil) {
         self.view = view
         self.interactor = Interactor(presenter: self)
         self.router = Router()
@@ -32,7 +34,7 @@ extension Presenter: ViewToPresenterProtocol {
 
 extension Presenter: InteractorToPresenterProtocol {
     func conversionSucceed(result: Array<String>) {
-        router?.showResultScreen(payload: result)
+        router?.showResultScreen(viewController: self.view ?? nil, payload: result)
     }
     
     func conversionFailed() {
@@ -40,3 +42,4 @@ extension Presenter: InteractorToPresenterProtocol {
     }
 }
 
+    

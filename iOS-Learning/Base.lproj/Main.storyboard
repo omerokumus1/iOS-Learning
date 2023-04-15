@@ -52,7 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="currencyLabel" destination="5de-gf-eAK" id="Buo-AF-4MD"/>
-                        <segue destination="kL1-wN-JO7" kind="show" id="vzs-Mh-M3l"/>
+                        <segue destination="kL1-wN-JO7" kind="show" identifier="toResultVC" id="vzs-Mh-M3l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

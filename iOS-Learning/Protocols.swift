@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /*
     1. Yöntem: Her bir haberleşme için ayrı protocol yaz
@@ -30,7 +31,7 @@ protocol PresenterProtocol {
     var interactor: PresenterToInteractorProtocol? {get set}
     
     // 2. View referansına sahip olmalı
-    var view: PresenterToViewProtocol? { get set }
+    var view: VC? { get set }
     
     // 3. Router referansına sahip olmalı
     var router: PresenterToRouterProtocol? {get set}
@@ -72,6 +73,6 @@ protocol InteractorToPresenterProtocol {
 // Presenter'ın haberleşeceği Router
 protocol PresenterToRouterProtocol {
     // Router, Presenter'a ne sunmalı?
-    func showResultScreen(payload: Array<String>)
+    func showResultScreen(viewController: UIViewController?, payload: Array<String>)
 }
 

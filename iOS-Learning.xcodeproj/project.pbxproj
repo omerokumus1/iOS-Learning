@@ -73,11 +73,11 @@
 				D0F8834929E57A1A0071A4FB /* ViewController.swift */,
 				D0F8836729E628B30071A4FB /* Interactor.swift */,
 				D0F8836529E625CC0071A4FB /* Presenter.swift */,
+				D0F8836B29E62B260071A4FB /* Router.swift */,
 				D0F8834B29E57A1A0071A4FB /* Main.storyboard */,
 				D0F8834E29E57A1B0071A4FB /* Assets.xcassets */,
 				D0F8835029E57A1B0071A4FB /* LaunchScreen.storyboard */,
 				D0F8835329E57A1B0071A4FB /* Info.plist */,
-				D0F8836B29E62B260071A4FB /* Router.swift */,
 			);
 			path = "iOS-Learning";
 			sourceTree = "<group>";

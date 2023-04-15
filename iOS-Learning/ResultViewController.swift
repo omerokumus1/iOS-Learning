@@ -17,6 +17,9 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(tl)
+        print(dollar)
+        print(euroLabel)
         tlLabel.text = tl
         dollarLabel.text = dollar
         euroLabel.text = euro
