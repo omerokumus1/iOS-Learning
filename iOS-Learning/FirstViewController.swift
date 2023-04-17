@@ -20,12 +20,13 @@ class FirstViewController: UIViewController {
 //        let secondVC = UIStoryboard.instantiateViewController(
 //            storyboard!
 //        )(withIdentifier: "SecondViewController") as! SecondViewController
-//
-        let secondVC = storyboard?.instantiateViewController(
-            withIdentifier: "SecondViewController"
-        ) as! SecondViewController
-        self.present(secondVC, animated: true)
+                
+//        let secondVC = storyboard?.instantiateViewController(
+//            withIdentifier: "SecondViewController"
+//        ) as! SecondViewController
+//        self.present(secondVC, animated: true)
 
+        router.startSecondScreen()
     }
     
     
