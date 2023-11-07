@@ -13,14 +13,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let uiSwitch = UISwitch(frame: CGRect(x: view.center.x-50, y: 100,
+        let datePicker = UIDatePicker(frame: CGRect(x: 10, y: 100,
                                               width: 100, height: 100))
         
-        uiSwitch.thumbTintColor = UIColor.systemBlue
         
         
         
-        view.addSubview(uiSwitch)
+        
+        view.addSubview(datePicker)
     }
 
 }
