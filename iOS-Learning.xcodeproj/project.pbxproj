@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D063D0FE2B29687200400D40 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063D0FD2B29687200400D40 /* ObservableObject.swift */; };
 		D0F8834629E57A1A0071A4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8834529E57A1A0071A4FB /* AppDelegate.swift */; };
 		D0F8834829E57A1A0071A4FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8834729E57A1A0071A4FB /* SceneDelegate.swift */; };
 		D0F8834A29E57A1A0071A4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8834929E57A1A0071A4FB /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D063D0FD2B29687200400D40 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		D0F8834229E57A1A0071A4FB /* iOS-Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F8834529E57A1A0071A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F8834729E57A1A0071A4FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		D0F8834429E57A1A0071A4FB /* iOS-Learning */ = {
 			isa = PBXGroup;
 			children = (
+				D063D0FD2B29687200400D40 /* ObservableObject.swift */,
 				D0F8834529E57A1A0071A4FB /* AppDelegate.swift */,
 				D0F8834729E57A1A0071A4FB /* SceneDelegate.swift */,
 				D0F8834929E57A1A0071A4FB /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D063D0FE2B29687200400D40 /* ObservableObject.swift in Sources */,
 				D0F8834A29E57A1A0071A4FB /* ViewController.swift in Sources */,
 				D0F8834629E57A1A0071A4FB /* AppDelegate.swift in Sources */,
 				D0F8834829E57A1A0071A4FB /* SceneDelegate.swift in Sources */,
