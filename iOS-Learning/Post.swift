@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post: Encodable {
+struct Post: Encodable & Decodable {
     let id: Int
     let title: String
     let body: String

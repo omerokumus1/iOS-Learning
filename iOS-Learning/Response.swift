@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Response: Decodable {
+struct Response: Decodable & Encodable {
     let id: Int
     let userId: Int
     let title: String
