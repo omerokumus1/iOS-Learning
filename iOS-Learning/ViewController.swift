@@ -55,6 +55,43 @@ class ViewController: UIViewController {
                    method: .post,
                    parameters: post)
         
+        // headers
+        
+        let headers: HTTPHeaders = [
+            .authorization(username: "user", password: "password"),
+            .accept("application/json")
+        ]
+        AF.request("https://httpbin.org/post",
+                   headers: headers)
+        
+        // Authorization
+        let user = "test@email.com"
+        let password = "testpassword"
+        
+        // Via URLCredential
+        let credential = URLCredential(user: user, 
+                                       password: password,
+                                       persistence: .forSession)
+        AF.request("https://httpbin.org/post")
+            .authenticate(with: credential)
+        //            .response(completionHandler: { response in
+        //                debugPrint(response)
+        //            })
+            .responseDecodable(of: Post.self) { response in
+                guard let post = response.value else {return}
+                debugPrint(response)
+            }
+        
+        // via username and password
+        AF.request("https://httpbin.org/post")
+            .authenticate(username: user, password: password)
+//            .response(completionHandler: { response in
+//                debugPrint(response)
+//            })
+            .responseDecodable(of: Post.self) { response in
+                guard let post = response.value else {return}
+                debugPrint(response)
+            }
     }
 
 
