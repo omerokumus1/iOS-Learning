@@ -48,12 +48,14 @@ class ViewController: UIViewController {
         
         let post = Post(userId: 1, id: 1, 
                         title: "title", body: "body")
-        AF.request("https://httpbin.org/post",
-                   parameters: post)
         
         AF.request("https://httpbin.org/post",
                    method: .post,
                    parameters: post)
+        .response { response in
+            debugPrint("spotted response")
+            debugPrint(response)
+        }
         
         // headers
         
