@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P72-Tm-dBf">
+                                <rect key="frame" x="148" y="283" width="97" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5W-dl-kun">
+                                <rect key="frame" x="163.66666666666666" y="418" width="65.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Login"/>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Wrong Credentials" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fa8-Ms-6Sh">
+                                <rect key="frame" x="128" y="354" width="137" height="31"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P72-Tm-dBf" firstAttribute="centerX" secondItem="B5W-dl-kun" secondAttribute="centerX" id="0jz-bR-YQl"/>
+                            <constraint firstItem="B5W-dl-kun" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163.66666666666666" id="1rL-WV-P6z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B5W-dl-kun" secondAttribute="bottom" constant="365" id="Djj-bV-bzS"/>
+                            <constraint firstItem="Fa8-Ms-6Sh" firstAttribute="centerX" secondItem="B5W-dl-kun" secondAttribute="centerX" id="Jqj-Lc-Umc"/>
+                            <constraint firstItem="P72-Tm-dBf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="L71-LS-rzz"/>
+                            <constraint firstItem="P72-Tm-dBf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="LDK-1n-mOc"/>
+                            <constraint firstItem="P72-Tm-dBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W7O-zx-4vs"/>
+                            <constraint firstItem="Fa8-Ms-6Sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="WP7-HF-6Ad"/>
+                            <constraint firstItem="Fa8-Ms-6Sh" firstAttribute="top" secondItem="P72-Tm-dBf" secondAttribute="bottom" constant="37" id="gL0-zY-QeX"/>
+                            <constraint firstItem="B5W-dl-kun" firstAttribute="top" secondItem="Fa8-Ms-6Sh" secondAttribute="bottom" constant="33" id="ohb-vV-rYw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="B5W-dl-kun" id="yGX-de-CTb"/>
+                        <outlet property="textField" destination="P72-Tm-dBf" id="S2u-TM-rWJ"/>
+                        <outlet property="textView" destination="Fa8-Ms-6Sh" id="3BU-eQ-E7T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
