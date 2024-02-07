@@ -8,21 +8,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Show keyboard
         textField.becomeFirstResponder()
         
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
-            self.view.subviews.first { $0.isFirstResponder }?.resignFirstResponder()
+        // Hide keyboard
+        textField.resignFirstResponder()
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0,
+                             repeats: false) { timer in
+            
+            // Hide keyboard
+            // - if you dont know who is the first responder
+            self.view.subviews
+                .first { $0.isFirstResponder }?
+                .resignFirstResponder()
         }
         
         
     }
     
     
-
-
+    
+    
 }
 
