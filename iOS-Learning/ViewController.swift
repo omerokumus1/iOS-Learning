@@ -9,10 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        textField.becomeFirstResponder()
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
+            self.view.subviews.first { $0.isFirstResponder }?.resignFirstResponder()
+        }
+        
+        
     }
+    
+    
 
 
 }
