@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4B78ABA4-E6D4-4576-8F51-1439EB9E1F1E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C11AEBEF-6A9E-4B89-B81D-FB4B48040A85"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Learning/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C11AEBEF-6A9E-4B89-B81D-FB4B48040A85 - acaa548778536e05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Learning.ViewController.scrollViewWillEndDragging(_: __C.UIScrollView, withVelocity: __C.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer&lt;__C.CGPoint&gt;) -&gt; ()"
+                  moduleName = "iOS-Learning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omerokumus/WorkSpace/iOS/iOS-Learning/iOS-Learning/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+               <Location
+                  uuid = "C11AEBEF-6A9E-4B89-B81D-FB4B48040A85 - acaa548778536e64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Learning.ViewController.scrollViewWillEndDragging(_: __C.UIScrollView, withVelocity: __C.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer&lt;__C.CGPoint&gt;) -&gt; ()"
+                  moduleName = "iOS-Learning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omerokumus/WorkSpace/iOS/iOS-Learning/iOS-Learning/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "1300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5A38427-88BF-4A15-9226-998D147EB477"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS-Learning/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D5A38427-88BF-4A15-9226-998D147EB477 - acaa548778536d81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Learning.ViewController.scrollViewWillEndDragging(_: __C.UIScrollView, withVelocity: __C.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer&lt;__C.CGPoint&gt;) -&gt; ()"
+                  moduleName = "iOS-Learning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omerokumus/WorkSpace/iOS/iOS-Learning/iOS-Learning/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "1472">
+               </Location>
+               <Location
+                  uuid = "D5A38427-88BF-4A15-9226-998D147EB477 - acaa548778536da2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Learning.ViewController.scrollViewWillEndDragging(_: __C.UIScrollView, withVelocity: __C.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer&lt;__C.CGPoint&gt;) -&gt; ()"
+                  moduleName = "iOS-Learning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omerokumus/WorkSpace/iOS/iOS-Learning/iOS-Learning/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "1416">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
