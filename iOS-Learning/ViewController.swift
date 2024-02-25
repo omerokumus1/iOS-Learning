@@ -84,6 +84,12 @@ class ViewController: UIViewController {
         //collectionView.delegate = self
         collectionView.isPagingEnabled = false
         
+        /* Error when not registered:
+         Unexpectedly found nil while implicitly unwrapping an
+         Optional value
+         
+         This happens when you try to access a view in custom cell
+        */
         collectionView.register(
             UINib.init(
                 nibName: CustomCell.identifier,
