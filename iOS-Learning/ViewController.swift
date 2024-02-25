@@ -9,7 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let colors = [UIColor.red, UIColor.blue, UIColor.green, UIColor.yellow, UIColor.orange, UIColor.purple, UIColor.red, UIColor.blue, UIColor.green, UIColor.yellow, UIColor.orange, UIColor.purple, ]
+    let colors = [
+        UIColor.red,
+        UIColor.blue,
+        UIColor.green,
+        UIColor.yellow,
+        UIColor.orange,
+        UIColor.purple,
+        UIColor.red,
+        UIColor.blue,
+        UIColor.green,
+        UIColor.yellow,
+        UIColor.orange,
+        UIColor.purple,
+    ]
     @IBOutlet weak var collectionView: UICollectionView!
     var layout = UICollectionViewFlowLayout()
     var currentIndex = 0
@@ -17,46 +30,102 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.layer.borderWidth = 1.0
+        collectionView.layer.borderColor = UIColor.black.cgColor
+        
+        // Horizontal scrolling
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: collectionView.bounds.width-80, height: 128)
-        layout.minimumInteritemSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 40)
+        
+        // Full size of the collectionView
+        // layout.itemSize = collectionView.frame.size
+        
+        // Half of the width + full height
+        layout.itemSize = CGSize(width: collectionView.frame.width/2, height: collectionView.frame.height)
+        
+        
+        // collectionView padding (If itemSize height is equal to collectionView height, then vertical padding is not shown)
+        // layout.sectionInset = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+        
+        // contentView margin (If itemSize height is equal to collectionView height, then vertical padding is not shown)
+        // This margin does not set margin between items
+        collectionView.contentInset = UIEdgeInsets(top: 8, left: 12, bottom: 16, right: 20)
+        
+        /* -> Setting Margin between items
+                1. Provide itemSize
+                2. Give inset to cell
+                    or
+                    give trailing constraint to contentView, constraint to cell trailing
+         */
+        
+        
+        /*  -> Using Padding and achieving somehow wrap_content
+            1. Provide itemSize
+            2. Provide contentInset
+            3. set collectionView width and height according to the itemSize and contentInset
+         */
+        
+        
+        /* -> How does collection view lays out its elements
+            1. It has a grid behavior. 
+                If scrollDirection is horizontal:
+                    row-wise distribution: Place up to down, then next column
+                
+                If scrollDirection is vertical:
+                    column-wise distribution: Place left to right, then next row
+        
+            2. It lays out its elements so that the spacing between them is the
+                same in each row or column
+         
+         */
+        
         
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.isPagingEnabled = true
+        //collectionView.delegate = self
+        collectionView.isPagingEnabled = false
         
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
 }
 
 extension ViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
         return colors.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = colors[indexPath.row]
+        cell.contentView.backgroundColor = colors[indexPath.row]
         return cell
     }
 }
 
 extension ViewController: UICollectionViewDelegate {
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        let itemWidth = layout.itemSize.width
-        let proportionalOffset = layout.collectionView!.contentOffset.x / itemWidth
-        let index = Int(round(proportionalOffset))
-        let numberOfItems = collectionView.numberOfItems(inSection: 0)
-        let safeIndex = max(0, min(numberOfItems - 1, index))
-        
-    }
+//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//        let itemWidth = layout.itemSize.width
+//        let proportionalOffset = layout.collectionView!.contentOffset.x / itemWidth
+//        let index = Int(round(proportionalOffset))
+//        let numberOfItems = collectionView.numberOfItems(inSection: 0)
+//        let safeIndex = max(0, min(numberOfItems - 1, index))
+//        
+//    }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    func scrollViewWillEndDragging(
+        _ scrollView: UIScrollView,
+        withVelocity velocity: CGPoint,
+        targetContentOffset: UnsafeMutablePointer<CGPoint>
+    ) {
         
     }
 }
