@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomCell" customModule="iOS_Learning" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="bpj-ay-rHj" customClass="CustomCell" customModule="iOS_Learning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="264"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="pxk-Wr-RPU">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="264"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tig-hC-mLm">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="264"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WBL-OR-Or3">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="20.333333333333332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBr-Qv-CDc">
+                                <rect key="frame" x="0.0" y="20.333333333333329" width="280" height="243.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="tig-hC-mLm" secondAttribute="trailing" constant="8" id="BYF-A4-M6p"/>
+                    <constraint firstAttribute="bottom" secondItem="tig-hC-mLm" secondAttribute="bottom" id="EBz-li-f95"/>
+                    <constraint firstItem="tig-hC-mLm" firstAttribute="leading" secondItem="pxk-Wr-RPU" secondAttribute="leading" id="o0X-GT-WSv"/>
+                    <constraint firstItem="tig-hC-mLm" firstAttribute="top" secondItem="pxk-Wr-RPU" secondAttribute="top" id="sFw-m1-e42"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="397" height="264"/>
+            <connections>
+                <outlet property="label" destination="WBL-OR-Or3" id="PLu-IT-yvb"/>
+                <outlet property="stackView" destination="tig-hC-mLm" id="x3Y-UV-eda"/>
+                <outlet property="view" destination="HBr-Qv-CDc" id="crX-fx-H74"/>
+            </connections>
+            <point key="canvasLocation" x="278.62595419847327" y="61.971830985915496"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

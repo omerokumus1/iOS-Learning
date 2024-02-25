@@ -84,6 +84,21 @@ class ViewController: UIViewController {
         //collectionView.delegate = self
         collectionView.isPagingEnabled = false
         
+        collectionView.register(
+            UINib.init(
+                nibName: CustomCell.identifier,
+                bundle: nil
+            ),
+            forCellWithReuseIdentifier: CustomCell.identifier
+        )
+        // Useless for single row horizontal collection view
+        //layout.minimumInteritemSpacing = 0
+        
+        // Sets minimum horizontal spacing between items in the
+        // single row horizontal collection view
+        layout.minimumLineSpacing = 0
+        
+        layout.itemSize = CGSize(width: collectionView.frame.width-40, height: collectionView.frame.height)
         
         
     }
@@ -104,8 +119,15 @@ extension ViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.contentView.backgroundColor = colors[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CustomCell.identifier,
+            for: indexPath
+        ) as! CustomCell
+        
+        let color = colors[indexPath.row]
+        cell.configure(text: color.accessibilityName, color: color)
+        
+        
         return cell
     }
 }
