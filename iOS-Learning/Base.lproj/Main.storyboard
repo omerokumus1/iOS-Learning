@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,34 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-AL-mSc" customClass="NoRecordView" customModule="iOS_Learning" customModuleProvider="target">
-                                <rect key="frame" x="87" y="247" width="240" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjL-fw-ToB" customClass="Checkbox" customModule="iOS_Learning" customModuleProvider="target">
-                                <rect key="frame" x="87" y="465" width="240" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <action selector="checkChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dKG-aZ-yET"/>
-                                </connections>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nTJ-hz-7z6">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA0-lA-Mms" customClass="NoRecordView" customModule="iOS_Learning" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="405"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iZ-RQ-60i" customClass="Checkbox" customModule="iOS_Learning" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="409" width="414" height="405"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bb9-AL-mSc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="199" id="1f9-gU-Lcx"/>
-                            <constraint firstItem="WjL-fw-ToB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="465" id="4Jn-SM-SmU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WjL-fw-ToB" secondAttribute="bottom" constant="269" id="HcJ-Ky-h9V"/>
-                            <constraint firstItem="WjL-fw-ToB" firstAttribute="top" secondItem="bb9-AL-mSc" secondAttribute="bottom" constant="90" id="LYh-Eq-8ip"/>
-                            <constraint firstItem="bb9-AL-mSc" firstAttribute="leading" secondItem="WjL-fw-ToB" secondAttribute="leading" id="d9I-oB-c7Q"/>
-                            <constraint firstItem="bb9-AL-mSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAH-zn-G4C"/>
-                            <constraint firstItem="bb9-AL-mSc" firstAttribute="trailing" secondItem="WjL-fw-ToB" secondAttribute="trailing" id="v1k-rX-JPy"/>
-                            <constraint firstItem="bb9-AL-mSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="xYm-Kb-F4I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nTJ-hz-7z6" secondAttribute="bottom" id="eNe-Zx-OlQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nTJ-hz-7z6" secondAttribute="trailing" id="o4j-f7-GbT"/>
+                            <constraint firstItem="nTJ-hz-7z6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uTf-1g-OCe"/>
+                            <constraint firstItem="nTJ-hz-7z6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v8M-cO-tlD"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="noRecordView" destination="bb9-AL-mSc" id="ZTH-mK-wt8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

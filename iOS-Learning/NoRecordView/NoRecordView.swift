@@ -7,17 +7,22 @@
 
 import UIKit
 
-@IBDesignable // To see rendered on storyboard
+//@IBDesignable // To see rendered on storyboard
 class NoRecordView: UIView {
     
-    @IBInspectable
-    @IBOutlet weak var lblNoRecord: UILabel!
+    //@IBInspectable
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var contentView: UIView!
+    
+    
     
     // Called once the View is created programatically
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
     }
+    
     
     // Called once we add the view to storyboard or another xib
     required init?(coder: NSCoder) {
@@ -30,11 +35,26 @@ class NoRecordView: UIView {
         let nibName = String(describing: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+        view.frame = bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
+        
+        // If File's owner is set to NoRecordView, then we can use below code
+//        Bundle.main.loadNibNamed(
+//            "NoRecordView",
+//            owner: NoRecordView.self
+//        )
         
         //let viewFromXib = Bundle.main.loadNibNamed("NoRecordView", owner: self)![0] as! UIView
         //viewFromXib.frame = self.bounds // viewFromXib cover all possible area of the container
         //addSubview(viewFromXib)
+        
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("awakeFromNib")
+    }
+    
     
 }

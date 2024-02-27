@@ -20,8 +20,8 @@ class ViewController: UIViewController {
 //        noRecordView.lblNoRecord.text = "Not Found"
 //        self.view.addSubview(noRecordView)
         
-        let checkbox = Checkbox(frame: CGRect(x: 50, y: 50, width: 200, height: 200))
-        view.addSubview(checkbox)
+//        let checkbox = Checkbox(frame: CGRect(x: 50, y: 50, width: 200, height: 200))
+//        view.addSubview(checkbox)
     }
     
     @IBAction
