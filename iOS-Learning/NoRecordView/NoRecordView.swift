@@ -39,6 +39,12 @@ class NoRecordView: UIView {
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
         
+        print("NoRecordView.bounds = \(bounds)")
+        print("NoRecordView.frame = \(frame)")
+        
+        print("view.bounds = \(view.bounds)")
+        print("view.frame = \(view.frame)")
+        
         // If File's owner is set to NoRecordView, then we can use below code
 //        Bundle.main.loadNibNamed(
 //            "NoRecordView",
@@ -55,6 +61,17 @@ class NoRecordView: UIView {
         super.awakeFromNib()
         print("awakeFromNib")
     }
+    
+    override func didMoveToWindow() {
+        print("didMoveToWindow NoRecordView.bounds = \(bounds)")
+        print("didMoveToWindow NoRecordView.frame = \(frame)")
+        
+        print("didMoveToWindow view.bounds = \(self.subviews.first!.bounds)")
+        print("didMoveToWindow view.frame = \(self.subviews.first!.frame)")
+    }
+    
+    
+    
     
     
 }
